@@ -118,9 +118,10 @@ const point = document.getElementById('goalChart');
 
 const updateGoals = () => {
   // set an object with groups as the property and an object as its value
+  
   let req = {
     goals: {
-      weightProgress:  [[232, 2], [230, 6], [231, 9], [231, 11]]
+      weightProgress:  [[232, 2], [220, 6], [231, 9], [251, 11]]
     }
   }
   // if there are changes entered in state for weight
@@ -207,7 +208,6 @@ const handleDev = (e) => {
                 
                   <DesktopDatePicker value={pickDate} onChange={(newValue) => setPickDate(newValue)}/>
                 </DemoItem>
-                <Button onClick={handleDev}>value?</Button>
               {/* </DemoContainer> */}
             </LocalizationProvider>
           </Box>
@@ -216,7 +216,7 @@ const handleDev = (e) => {
           <Grid size={7}>
           
                 <div id="dash_container" style={{display: "flex", flexDirection: "column", paddingTop: "35px", justifyContent: "center"}}>
-                  <div id="dash_workouts" style={{paddingRight:"20px"}}>
+                  <div id="dash_workouts" >
                     <DashboardWorkouts workouts={props.user.workouts}/>
                   </div>
                   <div id="dash_meals">
@@ -297,7 +297,7 @@ const handleDev = (e) => {
               return (
                 <div key={(tuple[0], tuple[1])}>
                 <Typography key={(tuple[0], tuple[1])} onClick ={() => removeProgress([tuple[0], tuple[1]])}>{tuple[0]} on Jan {tuple[1]}</Typography>
-                <Typography variant='h7'>Click to remove</Typography>
+                <Typography variant='h7' color="red">Click day to remove</Typography>
                 </div>
               )
             })
