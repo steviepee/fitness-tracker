@@ -216,7 +216,7 @@ const handleDev = (e) => {
           <Grid size={7}>
           
                 <div id="dash_container" style={{display: "flex", flexDirection: "column", paddingTop: "35px", justifyContent: "center"}}>
-                  <div id="dash_workouts" style={{backgroundColor: "blue", paddingRight:"20px"}}>
+                  <div id="dash_workouts" style={{paddingRight:"20px"}}>
                     <DashboardWorkouts workouts={props.user.workouts}/>
                   </div>
                   <div id="dash_meals">
